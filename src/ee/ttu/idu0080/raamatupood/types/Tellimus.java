@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tellimus implements Serializable{
+public class Tellimus implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public List<TellimuseRida> tellimuseRead;
 	
@@ -19,4 +19,10 @@ public class Tellimus implements Serializable{
 	public List<TellimuseRida> getTellimuseRead() {
 		return tellimuseRead;
 	}
+
+	@Override
+	public String toString() {
+		return "Tellimus [tellimuseRead=" + tellimuseRead + "]";
+	}
+	
 }

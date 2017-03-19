@@ -29,15 +29,15 @@
 		</java>
 	</target>
 
-	<target name="runConsumer" depends="compile">
-		<java classname="ee.ttu.idu0080.raamatupood.client.Consumer" fork="true">
+	<target name="runRaamatupood" depends="compile">
+		<java classname="ee.ttu.idu0080.raamatupood.client.Raamatupood" fork="true">
 			<classpath refid="main.classpath" />
 			<jvmarg line="-Djava.security.policy=policy.all" />
 		</java>
 	</target>
 
-	<target name="runProducer" depends="compile">
-		<java classname="ee.ttu.idu0080.raamatupood.client.Producer" fork="true">
+	<target name="runTellija" depends="compile">
+		<java classname="ee.ttu.idu0080.raamatupood.client.Tellija" fork="true">
 			<classpath refid="main.classpath" />
 			<jvmarg line="-Djava.security.policy=policy.all" />
 		</java>

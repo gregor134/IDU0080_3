@@ -1,8 +1,9 @@
 package ee.ttu.idu0080.raamatupood.types;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Toode {
+public class Toode implements Serializable {
 	private Integer kood;
 	private String nimetus;
 	private BigDecimal hind;
@@ -36,4 +37,10 @@ public class Toode {
 	public void setHind(BigDecimal hind) {
 		this.hind = hind;
 	}
+
+	@Override
+	public String toString() {
+		return "Toode [kood=" + kood + ", nimetus=" + nimetus + ", hind=" + hind + "]";
+	}
+	
 }

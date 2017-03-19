@@ -4,11 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TellimuseRida {
+public class TellimuseRida implements Serializable {
 	private Toode toode;
 	private long kogus;
 	
-	private TellimuseRida(Toode toode, long kogus) {
+	public TellimuseRida(Toode toode, long kogus) {
 		this.toode = toode;
 		this.kogus = kogus;
 	}
@@ -28,4 +28,10 @@ public class TellimuseRida {
 	public void setKogus(long kogus) {
 		this.kogus = kogus;
 	}
+
+	@Override
+	public String toString() {
+		return "TellimuseRida [toode=" + toode + ", kogus=" + kogus + "]";
+	}
+	
 }
